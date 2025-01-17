@@ -54,10 +54,11 @@ configure_athena:
 - Run python src/data-lake.py to execute the script:
 ![alt text](<Screenshot 2025-01-16 151931.png>)
 
+## Manually check for resources
 - Resources created in S3.
 ![alt text](image.png)
 
-- Raw data is stored in /raw-data and the query results will be stored in /athena-results.
+- There are two general purpose buckets in S3: raw data is stored in /raw-data and the query results will be stored in /athena-results.
 ![alt text](image-1.png)
 
 ## Querying with Athena
@@ -71,3 +72,11 @@ In the Athena Query Editor tab:
 
 ![alt text](image-3.png)
 
+## Lessons Learned
+- Automating the creation of services with a script.
+- Integrating external APIs into cloud-based workflows.
+
+## Future Enhancements
+1. Automate data ingestion with AWS Lambda
+2. Implement a data transformation layer with AWS Glue ETL
+3. Add advanced analytics and visualizations (AWS QuickSight)

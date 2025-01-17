@@ -51,7 +51,23 @@ configure_athena:
 ```
 
 ## Executing the scripts
-### Using Cloudshell
-- In the AWS console, click on the cloudshell icon on the top bar:
-![alt text](<Screenshot 2025-01-17 104654.png>)
-### Using the terminal
+- Run python src/data-lake.py to execute the script:
+![alt text](<Screenshot 2025-01-16 151931.png>)
+
+- Resources created in S3.
+![alt text](image.png)
+
+- Raw data is stored in /raw-data and the query results will be stored in /athena-results.
+![alt text](image-1.png)
+
+## Querying with Athena
+Now the data can be queried with Athena using SQL query commands:
+e.g
+In the Athena Query Editor tab:
+`SELECT * FROM nba_analytics` will return:
+![alt text](image-2.png)
+
+`select * from nba_players where playerid=20000441` will return a single player:
+
+![alt text](image-3.png)
+

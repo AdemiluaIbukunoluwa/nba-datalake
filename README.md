@@ -49,4 +49,9 @@ configure_athena:
     - Executes SQL query to create the database "nba_analytics" if it does not exist.
     - Specifies where to store the result of the query execution.
 ```
-    
+
+## Executing the scripts
+### Using Cloudshell
+- In the AWS console, click on the cloudshell icon on the top bar:
+![alt text](<Screenshot 2025-01-17 104654.png>)
+### Using the terminal

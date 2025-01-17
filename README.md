@@ -23,9 +23,30 @@ This file will have:
 
 ## PYTHON SCRIPT: src/data-lake.py./
 - The python script has 6 methods
+
 ```
-### create_s3_bucket:
-    - Creates a bucket where the data is stored
-    - The bucket name is fetched from the .env file
+create_s3_bucket:
+    - Creates a bucket where the data is stored.
+    - The bucket name is fetched from the `.env` file.
+
+create_glue_db:
+    - Initializes the Glue database.
+
+fetch_nba_data:
+    - Fetches the endpoint from the URL in the `.env` file and returns the fetched data.
+
+upload_data_to_s3:
+    - Converts the fetched data to line-delimited JSON using the `convert_to_line_delimited_json()` function.
+    - Uploads the formatted data into the S3 bucket created earlier.
+
+create_glue_table:
+    - Creates a Glue table named "nba_players," which can be queried by Athena.
+    - Defines the schema for the table, specifying the data types and location of the data that Glue will scan.
+
+configure_athena:
+    - Sets up the Athena output location.
+    - Queries the data that is in the S3 bucket.
+    - Executes SQL query to create the database "nba_analytics" if it does not exist.
+    - Specifies where to store the result of the query execution.
 ```
     
